@@ -1,0 +1,90 @@
+Computer Science
+	- Problem solving
+	- Thinking methodically / correctly / precisely
+	- Think like programmer / computer scientist
+	
+	Input -> Problem Solving -> Output
+	
+Languages Computer Speaks:
+	- Binary (0 and 1)
+	- but able to perform many tasks
+	
+	000 
+	001
+	010
+	011
+	100
+	101
+	110
+	111
+	
+	- Binary very simple to represent
+	- on / off state
+	- high / low state
+	etc.
+	
+	Can have many switches either on or off
+	- then can start counting using many switches
+	
+
+
+000 = 2^2 2^1 2^0 = 4 2 1
+
+
+4 2 1
+1 1 1 = 4 + 2 + 1 = 7
+
+
+How can computer do much more than counting? (Representing information using Binary)
+
+	- represent characters using numbers
+	- ASCII initially (each character has a number assigned)
+		- Limitation of 256 characters
+		
+		- H : 72 = 0100 1000
+		- I : 73 = 0100 1001
+		etc.
+			- ASCII chart exists
+		- to represent HI, require 16 bits ( 2 bytes )
+		- 1 byte = 8 bits
+			
+	- unicode-8 (UTF-8) newer standard
+		- more characters possible
+		- 32 bits : 4 billion possible chars
+	
+	
+	
+	
+- File formats define what each character is represented by
+	.jpg
+	.txt
+	.xlsx
+	.cpp
+	- to allow computer to  distinguish between number 2 and character "2"
+	
+	
+How computer represent colors?
+
+	- RGB values (primary colors)
+	- R : 0 to 255
+	- G : 0 to 255
+	- B : 0 to 255
+	
+	(R, G, B) = (0, 0, 255) = totally Blue
+	(72, 73, 33) : olive like color
+	
+	Pixel: small square grid on screen
+	- each pixel consist of 24 bits (8 bits per color)
+
+
+Video?
+	- A sequence of images across time
+		- 30 frames per second (30 images per second)
+		- 60 frames per second
+		
+		
+Audio?
+	- eg: midi format 
+	
+	numbers representing:
+		- notes / duration / volume
