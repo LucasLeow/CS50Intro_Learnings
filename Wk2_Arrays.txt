@@ -1,0 +1,98 @@
+Arrays
+
+
+
+	-- How C files are compiled --
+	
+		1) clang -o <newFileName> hello.c -lcs50
+			- clang is the compiler that converts source code to assembly language
+			- -o : output
+			- -lcs50:  (includes cs50 library files), must include #include <cs50.h>
+		
+		
+	What happens during compiling process:
+	
+		1) Preprocessing
+			- considers the preprocess directives
+				- #include <cs50.h>
+				- #include <stdio.h>
+			- References the prototypes in header files into own file
+			
+		2) Compiling
+			- Convert high level langugage to Assembly Language
+				- computer instructions to perform certain actions
+			- Each OS have its own assembly language
+				
+		3) Assembling
+			- Assembly langauge converted to machine code (Binary)
+			
+		4) Linking
+			- Linking codes from other libraries
+				- eg. cs50.c & stdio.c combined into own code
+				
+
+-- Debugging --
+	- Tools & techniques exist to help debug program
+		1) using print to see what is going on with the program
+		
+		2) Use debugger tool
+			- setting breakpoints and running each step sequentially
+			- check what is output of each step of process
+			
+		3) "Rubber Duck" technique
+			- talking to self to debug the problem
+			
+
+-- Array --
+	- Store multiple values
+	- must be of same data types for C
+	
+	int scores[3]; // size 3 int array
+	
+	
+	
+-- char Array to form a string --
+	- array of characters forms a string
+	- nul character to distinguish end of string "\0"
+		- consumes 1 extra memory to store nul char
+		- used to specify end of string
+		
+		
+		HI!\0BYE!\0
+		
+	#include <string.h>
+		- to handle strings
+		
+-- Examples on arrays --
+-- Examples on <string.h> library
+
+
+
+int main(void)
+	- (cmd line arguments)
+		- void means doesnt take cmd line argument
+		
+		
+int main(int argc, string argv[])
+	- can include cmd line argument when running program
+	- argc : argument count : how many words typed in prompt
+	- argv[] : argument vector : array of words typed in cmd line
+	
+	
+	
+File name: argv.c
+
+	int main(int argc, string argv[]) {
+		printf("Hello, %s", argv[1]);
+	}
+
+	in cmd:
+		- make argv
+		./argv David
+		* arg will always be sent as string
+		
+		
+exit status:
+	- return 1; // smthing wrong
+	- return 0; // nothing wrong with program
+		- program returns 0 automatically
