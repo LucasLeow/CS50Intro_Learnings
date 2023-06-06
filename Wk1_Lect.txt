@@ -1,0 +1,190 @@
+C-Language Focus
+
+
+Coding Considerations:
+	1) Correctness
+		- Want code to solve the problem
+		- Automation tools that performs code testing
+		
+	2) Code Design
+		- How well designed code is
+		- how elegant code is
+		- may be correct but also should be well structured
+			- efficient algo
+			- meaningful var names
+			- proper indentations
+	
+	3) Code Style
+		- Making good code design as a habit
+		
+		
+ -- How Computer Understand C Langauge --
+ 
+	Integrated Development Environment:
+		- Environment to write code
+		- many tools to make coding simpler
+			- syntax highlighting
+			- debugging tools
+			- addons to enhance coding experience
+		
+	Source code (main.c) -> compiler -> Machine code
+	
+	Compilation language
+		- converts entire file to machine code before execution
+		
+	Interpretation Language
+		- converts file line by line and executing each line
+		
+		1) Create main.c file to write source code
+		2) in terminal, cd to proj folder and type: make main
+		3) machine code file "main" will be created
+		
+		- *.c file is not executable
+		
+		
+Functions in C
+
+#include <cs50.h> // to get the string variable
+string answer = get_string("What is your name?: ");
+printf("hello %s", answer);
+
+
+Datatypes in C:
+
+	- int
+	- long
+	- char
+	- float
+	- double (more precision than float)
+	- bool
+	
+
+Format codes in C:
+	- %c : char
+	- %f : float / double
+	- %i/d : integer
+	- %li : long integer
+	- %s : string 
+
+	
+	
+- Entry point for any C program:
+
+	int main(void) {
+		
+	}
+	
+- Header file
+	- ends with .h extension
+	- library of helper functions written by users
+	- can be imported to main program
+		- #include <cs50.h>
+		
+		
+Limitations in Data types (bits)
+
+	- newer computer uses more bits
+	- int : 32 bits : up to 2^32 : 4 294 9677 296 or  +- 2 147 483 648
+		- 4 000 000 000 becomes negative number 
+	- long int uses more memory bits (64 bits)
+	
+
+Conditionals ( C ) 
+
+	- if (condition) {
+		... 
+	} else if {
+		...
+	} else {
+		...
+	}
+	
+	
+	Conditional operators
+		== : equality check
+		!= : Inequality check
+		>= 
+		>
+		<=
+		<
+
+-- constants --
+
+	- don't allow the change of value of variable
+	- convention is to capitalize variable
+	
+	eg.
+		const int MINE = 2;
+		
+-- parity --
+	- in mathematics : checking if number is even or odd
+		- n % 2 == 0 (even number returns 0) (no remainder for even number)
+	
+-- OR & AND operator --
+
+	OR : ||
+	AND : &&
+	
+	if (c == "y" || c == "Y")
+	if (c == "n" && d == "N")
+	
+	
+-- C language quotes convention --
+
+	- character is ''
+	- string is "" (even if single letter string)
+	
+-- Loops --
+
+	while (true) { // forever loop
+		...
+	}
+	
+	for (int i = 0; i < 3; i++) {
+		...
+	}
+	
+-- Function prototypes --
+
+	- to let C program know what function will be in program
+	- declaring function first, define it later
+	- only for C, other language does not have this issue
+	
+
+	void meow(int n);
+	
+	void meow(int n) {
+		for (int i = 0; i < n; i++) {
+			printf("meow! \n");
+		}
+	}
+	
+	
+-- Scope of variables --
+	- global or local
+
+	- local : local to the function
+		- cannot access variable outside of function
+		
+	- global:
+		- can be accessed in any function
+		
+Truncation
+	- when int / int, the decimals are ignored
+	- only the int value is retained
+	eg: 0.66667 -> 0
+	4.3333 -> 4
+	- may cause calculation problems
+	
+Type casting
+
+	float z = (float) x / (float) y;
+	- convert int x & y to float
+	
+	
+Unix Epoch
+	- january 1st 1970. 
+	- all time in programs evaluated with Unix epoch as reference
+		- how many seconds past the unix epochs
+		
+
